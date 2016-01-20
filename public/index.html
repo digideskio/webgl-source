@@ -4,8 +4,11 @@
     <head>
         <title>Source Demo</title>
         
+        <!-- Configuration -->
+        <script type="text/javascript" src="config.js"></script>
+
         <!-- Common Utilities -->
-        <script type="text/javascript" src="js/glMatrix.js"></script>
+        <script type="text/javascript" src="js/glmatrix.js"></script>
         <script type="text/javascript" src="js/js-struct.js"></script>
         <script type="text/javascript" src="js/webgl-util.js"></script>
         <script type="text/javascript" src="js/webgl-demo-camera.js"></script>
@@ -21,12 +24,12 @@
         
         <!-- Main Javascript -->
         <script type="text/javascript">
-            "use strict";
+//            "use strict";
             
             var model, map;
             var camera;
             var frame = 0;
-
+	    console.log("Starting up...");
             // Set up basic GL State up front
             function initGL(gl, canvas) {
                 gl.viewport(0, 0, canvas.width, canvas.height);
@@ -47,7 +50,7 @@
             
             // Load the map
             function initMesh(gl) {
-                map = Object.create(SourceBsp).load(gl, 'root/tf/maps/ctf_2fort', function(map) {
+                map = Object.create(SourceBsp).load(gl, map_path, function(map) {
                     setCameraSpawn(map.entities.info_player_start[0]);
                 });
                 map.onMaterialsComplete = function(map) {

@@ -25,7 +25,7 @@
  *    distribution.
  */
 
-"use strict";
+//"use strict";
 
 var debugVS = "attribute vec3 position;\n";
 debugVS += "uniform mat4 viewMat;\n";

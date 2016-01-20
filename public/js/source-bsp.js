@@ -25,7 +25,7 @@
  *    distribution.
  */
 
-"use strict";
+//"use strict";
 
 //=============
 // Shaders
@@ -208,6 +208,7 @@ var SourceBsp = Object.create(Object, {
     
     load: {
         value: function(gl, url, callback) {
+	    console.log("Loading BSP:" + url);
             this._initializeShaders(gl);
             SourceModel.initializeShaders(gl);
             

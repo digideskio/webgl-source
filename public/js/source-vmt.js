@@ -25,7 +25,7 @@
  *    distribution.
  */
 
-"use strict";
+//"use strict";
 
 //
 // Shader Tokenizer
@@ -248,7 +248,8 @@ var SourceMaterial = Object.create(Object, {
 
 var SourceMaterialManager = Object.create(Object, {
     materials: {
-        value: null
+        value: null,
+        writable: true
     },
     
     materialCount: {

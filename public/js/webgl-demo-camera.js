@@ -25,7 +25,7 @@
  *    distribution.
  */
 
-"use strict";
+//"use strict";
 
 /**
  * A ModelDemoCamera is one that always points at a central point and orbits around at a fixed radius
@@ -33,7 +33,8 @@
  */
 var ModelDemoCamera = Object.create(Object, {
     projectionMat: {
-        value: null
+        value: null,
+        writable: true
     },
     
     orbitX: {
@@ -67,7 +68,8 @@ var ModelDemoCamera = Object.create(Object, {
     },
     
     _viewMat: {
-        value: null
+        value: null,
+        writable: true
     },
     
     viewMat: {
@@ -154,11 +156,13 @@ var ModelDemoCamera = Object.create(Object, {
  */
 var FlyingDemoCamera = Object.create(Object, {
     projectionMat: {
-        value: null
+        value: null,
+        writable: true
     },
     
     _angles: {
-        value: null
+        value: null,
+        writable: true
     },
     
     angles: {
@@ -172,7 +176,8 @@ var FlyingDemoCamera = Object.create(Object, {
     },
     
     _position: {
-        value: null
+        value: null,
+        writable: true
     },
     
     position: {
@@ -186,15 +191,18 @@ var FlyingDemoCamera = Object.create(Object, {
     },
     
     speed: {
-        value: 100
+        value: 100,
+        writable: true
     },
     
     _dirty: {
-        value: true
+        value: true,
+        writable: true
     },
     
     _cameraMat: {
-        value: null
+        value: null,
+        writable: true
     },
     
     _pressedKeys: {
@@ -202,7 +210,8 @@ var FlyingDemoCamera = Object.create(Object, {
     },
     
     _viewMat: {
-        value: null
+        value: null,
+        writable: true
     },
     
     viewMat: {

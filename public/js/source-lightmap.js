@@ -26,7 +26,7 @@
  *    distribution.
  */
 
-"use strict";
+//"use strict";
 
 var LIGHTMAP_SIZE = 512;
 

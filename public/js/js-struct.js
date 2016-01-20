@@ -25,7 +25,7 @@
  *    distribution.
  */
 
-"use strict";
+//"use strict";
 
 // TODO: Ugh, this is messy. Do it differentely soon, please!
 var nextStructId = 0;

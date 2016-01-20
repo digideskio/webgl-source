@@ -1,2 +1,4 @@
-root/tf
+public/root/*
 .DS_Store
+bin/*
+node_modules/*

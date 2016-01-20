@@ -4,8 +4,11 @@
     <head>
         <title>Model Viewer</title>
         
+        <!-- Configuration -->
+        <script type="text/javascript" src="config.js"></script>
+
         <!-- Common Utilities -->
-        <script type="text/javascript" src="js/glMatrix.js"></script>
+        <script type="text/javascript" src="js/glmatrix.js"></script>
         <script type="text/javascript" src="js/js-struct.js"></script>
         <script type="text/javascript" src="js/webgl-util.js"></script>
         <script type="text/javascript" src="js/webgl-demo-camera.js"></script>
@@ -17,7 +20,7 @@
         
         <!-- Main Javascript -->
         <script type="text/javascript">
-            "use strict";
+//            "use strict";
             
             var model, camera;
             var frame = 0;
@@ -48,7 +51,7 @@
             
             // Load the model
             function initMesh(gl) {
-                model = Object.create(SourceModel).load(gl, 'root/tf/models/player/heavy');
+                model = Object.create(SourceModel).load(gl, player_model);
             }
 
             // Draw a single frame
